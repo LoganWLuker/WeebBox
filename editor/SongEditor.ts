@@ -29,6 +29,7 @@ import { SongDocument } from "./SongDocument";
 import { SongDurationPrompt } from "./SongDurationPrompt";
 import { SongRecoveryPrompt } from "./SongRecoveryPrompt";
 import { SpectrumEditor } from "./SpectrumEditor";
+import { CustomPrompt } from "./CustomPrompt";
 import { ThemePrompt } from "./ThemePrompt";
 import { TipPrompt } from "./TipPrompt";
 import { TrackEditor } from "./TrackEditor";
@@ -369,6 +370,7 @@ export class SongEditor {
 		option({ value: "displayVolumeBar" }, "Show Playback Volume"),
 		option({ value: "fullScreen" }, "Set Layout..."),
 		option({ value: "colorTheme" }, "Set Theme..."),
+		option({ value: "customTheme" }, "Custom Theme..."),
 		//option({value: "alwaysShowSettings"}, "Customize All Instruments"),
 	);
 	private readonly _scaleSelect: HTMLSelectElement = buildOptions(select(), Config.scales.map(scale => scale.name));
@@ -1153,6 +1155,9 @@ export class SongEditor {
 					break;
 				case "layout":
 					this.prompt = new LayoutPrompt(this._doc);
+					break;
+				case "custom":
+					this.prompt = new CustomPrompt(this._doc);
 					break;
 				default:
 					this.prompt = new TipPrompt(this._doc, promptName);
@@ -2848,6 +2853,9 @@ export class SongEditor {
 				break;
 			case "colorTheme":
 				this._openPrompt("theme");
+				break;
+			case "customTheme":
+				this._openPrompt("custom");
 				break;
 		}
 		this._optionsMenu.selectedIndex = 0;

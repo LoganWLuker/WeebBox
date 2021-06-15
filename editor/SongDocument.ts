@@ -42,6 +42,7 @@ export class SongDocument {
 	public fullScreen: string;
 	public enableChannelMuting: boolean;
 	public colorTheme: string;
+	public customTheme: string;
 	public displayBrowserUrl: boolean;
 	public displayVolumeBar: boolean = true;
 	public volume: number = 75;
@@ -76,6 +77,7 @@ export class SongDocument {
 		this.displayVolumeBar = window.localStorage.getItem("displayVolumeBar") != "false";
 		this.fullScreen = window.localStorage.getItem("fullScreen") || "normal";
 		this.colorTheme = window.localStorage.getItem("colorTheme") || "jummbox classic";
+		this.customTheme = window.localStorage.getItem("customTheme") || "no theme";
 
 		ColorConfig.setTheme(this.colorTheme);
 		Layout.setFullScreen(this.fullScreen);
@@ -356,6 +358,7 @@ export class SongDocument {
 		window.localStorage.setItem("displayVolumeBar", this.displayVolumeBar ? "true" : "false");
 		window.localStorage.setItem("fullScreen", this.fullScreen);
 		window.localStorage.setItem("colorTheme", this.colorTheme);
+		window.localStorage.setItem("customTheme", this.customTheme);
 		window.localStorage.setItem("volume", String(this.volume));
 	}
 

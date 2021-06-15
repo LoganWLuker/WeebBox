@@ -254,6 +254,7 @@ document.head.appendChild(HTML.style({ type: "text/css" }, `
 
 .beepboxEditor .track-area {
 	grid-area: track-area;
+	background-image: url('https://media.istockphoto.com/videos/petals-sakura-cherry-blossom-falling-on-black-background-looped-video-id925176466?s=640x640')
 }
 
 .beepboxEditor .settings-area {
@@ -1109,6 +1110,7 @@ li.select2-results__option[role=group] > strong:hover {
 /* wide screen */
 @media (min-width: 701px) {
 	#beepboxEditorContainer {
+		background-image: url('https://media.istockphoto.com/videos/petals-sakura-cherry-blossom-falling-on-black-background-looped-video-id925176466?s=640x640');
 		display: table;
 	}
 	.beepboxEditor {

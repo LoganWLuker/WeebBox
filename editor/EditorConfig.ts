@@ -24,8 +24,8 @@ export function prettyNumber(value: number): string {
 }
 
 export class EditorConfig {
-	public static readonly version: string = "2.3"; // Not using patch versions in display right now, maybe someday.
-	public static readonly versionDisplayName: string = "JummBox " + EditorConfig.version;
+	public static readonly version: string = "1.0"; // Not using patch versions in display right now, maybe someday.
+	public static readonly versionDisplayName: string = "WeebBox " + EditorConfig.version;
 
 	public static readonly presetCategories: DictionaryArray<PresetCategory> = toNameMap([
 		{

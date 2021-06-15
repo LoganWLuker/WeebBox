@@ -31,7 +31,7 @@ export class ColorConfig {
 					--link-accent: #98f;
 					--ui-widget-background: #444;
 					--ui-widget-focus: #777;
-					--pitch-background: #444;
+					--pitch-background: #393e4f99;
 					--tonic: #864;
 					--fifth-note: #468;
 					--white-piano-key: #bbb;
@@ -144,7 +144,7 @@ export class ColorConfig {
 					--link-accent: #f888ff;
 					--ui-widget-background: #443a3a;
 					--ui-widget-focus: #777;
-					--pitch-background: #353333;
+					--pitch-background: #35333399;
 					--tonic: #884a44;
 					--fifth-note: #415498;
 					--white-piano-key: #bbb;
@@ -258,7 +258,7 @@ export class ColorConfig {
 					--link-accent: #74f;
 					--ui-widget-background: #ececec;
 					--ui-widget-focus: #eee;
-					--pitch-background: #ececec;
+					--pitch-background: #ececec99;
 					--tonic: #f0d6b6;
 					--fifth-note: #bbddf0;
 					--white-piano-key: #eee;
@@ -378,7 +378,7 @@ export class ColorConfig {
 					--link-accent: #98f;
 					--ui-widget-background: #393e4f;
 					--ui-widget-focus: #6d6886;
-					--pitch-background: #393e4f;
+					--pitch-background: #393e4f99;
 					--tonic: #725491;
 					--fifth-note: #54547a;
 					--white-piano-key: #eee;
@@ -490,7 +490,7 @@ export class ColorConfig {
 					--link-accent: #9f8;
 					--ui-widget-background: #203829;
 					--ui-widget-focus: #487860;
-					--pitch-background: #203829;
+					--pitch-background: #20382999;
 					--tonic: #2b8d20;
 					--fifth-note: #385840;
 					--white-piano-key: #bda;
@@ -602,7 +602,7 @@ export class ColorConfig {
 					--link-accent: #da7b76;
 					--ui-widget-background: #533137;
 					--ui-widget-focus: #743e4b;
-					--pitch-background: #4f3939;
+					--pitch-background: #4f393999;
 					--tonic: #9e4145;
 					--fifth-note: #5b3e6b;
 					--white-piano-key: #d89898;
@@ -714,7 +714,7 @@ export class ColorConfig {
 			--link-accent: #707070;
 			--ui-widget-background: #353535;
 			--ui-widget-focus: #464646;
-			--pitch-background: #222121;
+			--pitch-background: #22212199;
 			--tonic: #1a1818;
 			--fifth-note: #555955;
 			--white-piano-key: #a89e9e;
@@ -827,7 +827,7 @@ export class ColorConfig {
 					--link-accent: #7af;
 					--ui-widget-background: #bf9cec;
 					--ui-widget-focus: #e9c4ff;
-					--pitch-background: #e2d9f9;
+					--pitch-background: #e2d9f999;
 					--tonic: #c288cc;
 					--fifth-note: #d8c9fd;
 					--white-piano-key: #e2e2ff;
