@@ -33,6 +33,7 @@ import { CustomPrompt } from "./CustomPrompt";
 import { ThemePrompt } from "./ThemePrompt";
 import { TipPrompt } from "./TipPrompt";
 import { TrackEditor } from "./TrackEditor";
+import { beepboxEditorContainer } from "./main";
 
 //namespace beepbox {
 const { button, div, input, select, span, optgroup, option, canvas } = HTML;
@@ -592,7 +593,7 @@ export class SongEditor {
 		this._trackContainer,
 	);
 	public readonly _barScrollBar: BarScrollBar = new BarScrollBar(this._doc, this._trackContainer);
-	private readonly _trackArea: HTMLDivElement = div({ class: "track-area" },
+	public _trackArea: HTMLDivElement = div({ class: "track-area", id: "secondImage", style: `background-image: url(${localStorage.getItem("customTheme2") || "https://media.istockphoto.com/videos/petals-sakura-cherry-blossom-falling-on-black-background-looped-video-id925176466?s=640x640"});`},
 		this._trackAndMuteContainer,
 		this._barScrollBar.container,
 	);
@@ -671,8 +672,8 @@ export class SongEditor {
 			this._modulatorGroup,
 		),
 	);
-
-	public readonly mainLayer: HTMLDivElement = div({ class: "beepboxEditor", tabIndex: "0" },
+	
+	public mainLayer: HTMLDivElement = div({ class: "beepboxEditor", tabIndex: "0"},
 		this._patternArea,
 		this._trackArea,
 		this._settingsArea,
@@ -1157,7 +1158,7 @@ export class SongEditor {
 					this.prompt = new LayoutPrompt(this._doc);
 					break;
 				case "custom":
-					this.prompt = new CustomPrompt(this._doc);
+					this.prompt = new CustomPrompt(this._doc, this._patternEditor, this._trackArea, beepboxEditorContainer);
 					break;
 				default:
 					this.prompt = new TipPrompt(this._doc, promptName);

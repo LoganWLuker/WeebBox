@@ -43,6 +43,7 @@ export class SongDocument {
 	public enableChannelMuting: boolean;
 	public colorTheme: string;
 	public customTheme: string;
+	public customTheme2: string;
 	public displayBrowserUrl: boolean;
 	public displayVolumeBar: boolean = true;
 	public volume: number = 75;
@@ -77,7 +78,8 @@ export class SongDocument {
 		this.displayVolumeBar = window.localStorage.getItem("displayVolumeBar") != "false";
 		this.fullScreen = window.localStorage.getItem("fullScreen") || "normal";
 		this.colorTheme = window.localStorage.getItem("colorTheme") || "jummbox classic";
-		this.customTheme = window.localStorage.getItem("customTheme") || "no theme";
+		this.customTheme = window.localStorage.getItem("customTheme") || "https://www.teahub.io/photos/full/244-2448998_anime-girl-wallpaper-4k.jpg";
+		this.customTheme2 = window.localStorage.getItem("customTheme2") || "https://media.istockphoto.com/videos/petals-sakura-cherry-blossom-falling-on-black-background-looped-video-id925176466?s=640x640";
 
 		ColorConfig.setTheme(this.colorTheme);
 		Layout.setFullScreen(this.fullScreen);
@@ -359,6 +361,7 @@ export class SongDocument {
 		window.localStorage.setItem("fullScreen", this.fullScreen);
 		window.localStorage.setItem("colorTheme", this.colorTheme);
 		window.localStorage.setItem("customTheme", this.customTheme);
+		window.localStorage.setItem("customTheme2", this.customTheme2);
 		window.localStorage.setItem("volume", String(this.volume));
 	}
 
